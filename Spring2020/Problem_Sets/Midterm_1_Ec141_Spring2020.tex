@@ -1,0 +1,196 @@
+%% LyX 2.3.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{setspace}
+\PassOptionsToPackage{normalem}{ulem}
+\usepackage{ulem}
+\onehalfspacing
+\usepackage{babel}
+\begin{document}
+\uline{Ec141, Spring 2020 }
+
+\emph{Midterm 1}
+
+\textbf{Please read each question carefully.} Start each question
+on a new bluebook page. The use of calculators and other computational
+aides is not allowed. Good luck!
+
+\medskip{}
+
+{[}1{]}\quad{}\textbf{{[}5 Points{]}}\quad{}Please write your full
+name and student ID on the first page of your pdf file of exam solutions.\medskip{}
+
+{[}2{]}\quad{}\textbf{{[}15 Points{]}}\quad{}The Undergraduate Dean
+has been collecting data on the high school GPA ($X$) of incoming
+students for a long, long time. She has also kept track of 1st semester
+GPA ($Y$) for enrolled students over the same period of time. She
+would like to be able to predict a student's 1st semester GPA using
+their high school GPA. She reports to you the following means, variances
+and a covariance for $X$ and $Y$: 
+\[
+\mu_{X}=\frac{12}{5},\mu_{Y}=2
+\]
+and
+\[
+\sigma_{X}^{2}=1/6,\sigma_{Y}^{2}=1/4,\sigma_{XY}=1/5.
+\]
+Because she has collected such a large sample you are free to treat
+these numbers as if they were population quantities.
+
+\qquad{}{[}a{]}\quad{}\textbf{{[}5 Points{]}}\quad{}Calculate the
+$\alpha$ and $\beta$ associated with the (mean square error minimizing)
+linear predictor of $Y$ given $X$, $\mathbb{E}^{*}[Y|X]=\alpha+\beta X$?
+
+\qquad{}{[}b{]}\quad{}\textbf{{[}10 Points{]}}\quad{}Say $\sigma_{X}^{2}=0$
+(e.g., only students with 4.0 GPAs have ever been admitted). What
+is the best linear predictor of $Y$ given $X$ in this case (you
+may assume all other parameters stay the same)? Why? \textbf{{[}2-4
+sentences{]}}.
+
+\medskip{}
+
+{[}3{]}\quad{}\textbf{{[}25 Points{]}}\quad{}Consider the following
+statistical model for the logarithm of daily city-wide sales of Bob
+Dylan's landmark \emph{Christmas in the Heart} album:
+\[
+\ln S=\alpha_{0}+\beta_{0}R+\gamma_{0}P+U,\thinspace\thinspace\mathbb{E}\left[\left.U\right|R,P\right]=0,
+\]
+where $R$ is the number of times a song from the album is played
+on KALX on the given day, and $P$ is the price of the album (which
+varies across your sample due to various (exogenous) record label
+promotions, holiday sales and so on). A friend estimates $\theta_{0}=\left(\alpha_{0},\beta_{0},\gamma_{0}\right)'$
+by the method of least squares. She claims that $\sqrt{N}\left(\hat{\theta}-\theta_{0}\right)\overset{D}{\rightarrow}\mathcal{N}\left(0,\Lambda_{0}\right)$
+and reports the following:
+\[
+\hat{\theta}=\left(\begin{array}{c}
+1.0\\
+0.01\\
+-0.51
+\end{array}\right),\thinspace\thinspace\frac{\hat{\Lambda}}{N}=\left(\begin{array}{ccc}
+0.25 & -0.002 & 0.010\\
+-0.002 & 0.01 & 0.005\\
+0.010 & 0.005 & 0.03
+\end{array}\right).
+\]
+\quad{}{[}a{]}\quad{}\textbf{{[}2 Points{]}}\quad{}Calculate a
+95 confidence interval for $\beta_{0}$.
+
+\quad{}{[}b{]}\quad{}\textbf{{[}5 Points{]}}\quad{}Your friend
+would like to test the hypothesis that ``for Bob Dylan one song on
+the radio is as good as cutting record price by \$1'' (a phrase used
+by her record store boss). Explain why this corresponds to:
+\begin{align*}
+H_{0} & :\beta_{0}=-\gamma_{0}\\
+H_{1} & :\beta_{0}\neq-\gamma_{0}
+\end{align*}
+\quad{}{[}c{]}\quad{}\textbf{{[}5 Points{]}}\quad{}We can re-write
+$H_{0}$ as
+\[
+H_{0}:C\theta=c
+\]
+Provide the appropriate forms for $C$ and $c$.
+
+\quad{}{[}d{]}\quad{}\textbf{{[}5 Points{]}}\quad{}How many restrictions
+on $\theta$ does $H_{0}$ imposes?
+
+\quad{}{[}e{]}\quad{}\textbf{{[}5 Points{]}}\quad{}Calculate the
+Wald statistics for $H_{0}$. Can we reject with size $\alpha=0.05$?
+
+\quad{}{[}f{]}\quad{}\textbf{{[}8 Points{]}}\quad{}Now formalize
+and test the hypothesis that ``for Bob Dylan one song on the radio
+is as good as cutting record price by \$3''.
+
+\medskip{}
+
+{[}4{]}\quad{}\textbf{{[}30 Points{]}}\quad{}Consider the following
+statistical model for the earnings of Berkeley students
+\[
+Y=\alpha+\beta G+\gamma A+U,\thinspace\mathbb{E}[U|G,A]=0,
+\]
+where $G$ equals one if the student graduated and zero if they dropped
+out and $A$ equals one if at least one of the student\textquoteright s
+parents graduated from college and zero otherwise.
+
+\qquad{}{[}a{]}\quad{}\textbf{{[}5 Points{]}}\quad{}You read in
+the Oakland Tribune newspaper that Berkeley graduates earn an average
+of \$75,000 per year nationwide, while the earnings of dropouts average
+only \$15,000. Express this population earnings difference between
+Berkeley graduates and dropouts in terms of the statistical model
+given above.
+
+\qquad{}{[}b{]}\quad{}\textbf{{[}5 Points{]}}\quad{}Under what
+conditions is it true that $\beta=\ensuremath{\$60,000}$? Do you
+think these conditions are likely to be true in practice? Briefly
+explain your answer \textbf{{[}3-5 sentences{]}}.
+
+\qquad{}{[}c{]}\quad{}\textbf{{[}5 Points{]}}\quad{}The same article
+reports that among Berkeley graduates, three fourths come from families
+where at least one parent completed college, while among all former
+students (i.e., graduates and dropouts) only seven twelfths come from
+such families. It also states that the overall (i.e., unconditional)
+graduation rate at Berkeley is two-thirds. Among dropouts, what fraction
+come from families where at least one parent completed college?
+
+\qquad{}{[}d{]}\quad{}\textbf{{[}5 Points{]}}\quad{}Assume $\gamma=\ensuremath{\$25,000}$.
+Using your answers in parts (a) and (c) solve for $\beta$. What is
+the expected earnings gain associated with graduating from Berkeley
+holding parent\textquoteright s education (i.e., A) constant? Briefly
+comment on why your answer differs from the earnings gap between graduates
+and dropouts reported by the Tribune \textbf{{[}3-5 sentences{]}}.
+
+\qquad{}{[}e{]}\quad{}\textbf{{[}5 Points{]}}\quad{}You are considering
+dropping out of Cal to spend more time on Telegraph Avenue. What is
+the (approximate) expected earnings loss associated with this decision?
+Explain \textbf{{[}3-5 sentences{]}}.
+
+\qquad{}{[}f{]}\quad{}\textbf{{[}5 Points{]}}\quad{}You move to
+Oakland upon graduation, your neighbor to the left tells you that
+he dropped out of Berkeley during the Free Speech Movement, your neighbor
+to the right tells you that he graduated from Berkeley about the same
+time. What is your expectation of the annual earnings of your two
+neighbors? Explain \textbf{{[}3-5 sentences{]}}.
+
+\medskip{}
+
+{[}5{]}\quad{}\textbf{{[}20 Points{]}}\quad{}The World Health Organization
+has contracted you to design a randomized experiment evaluating the
+efficacy of zinc supplements on diarrhea prevalence (measured as the
+number of episodes in the one hundred days prior to surveying). Let
+$Y\left(1\right)$ be the potential number of episodes of diarrhea
+if taking zinc supplements and $Y\left(0\right)$ the control potential
+outcome. A baseline survey of your target population yields a diarrhea
+prevalence of 10 days per one hundred days with a standard deviation
+of 5 days. Let $N$ be your target sample size and assume that half
+of respondents will be randomly assigned to treatment. Assume that
+the variance of $Y\left(1\right)$ and $Y\left(0\right)$ are equal
+to each other. Also assume that no respondents in your baseline survey
+were taking zinc supplements.
+
+\qquad{}{[}a{]}\quad{}\textbf{{[}10 Points{]}}\quad{}Derive an
+expression for the ex ante probability ($\beta$) that you reject
+the null of no effect in favor of a \emph{one-sided} alternative of
+a negative effect (i.e., treatment reduces diarrhea). Let $\alpha$
+denote the size of your test and $\theta$ the ATE. Carefully explain
+your reasoning and notation \textbf{{[}4-6 sentences{]}}.
+
+\qquad{}{[}b{]}\quad{}\textbf{{[}5 Points{]}}\quad{}Assume that
+$\theta=-10$. How large would $N$ need to be to ensure an ex ante
+rejection probability of 95 percent (for a test with size $\alpha=0.05$).
+
+\qquad{}{[}c{]}\quad{}\textbf{{[}5 Points{]}}\quad{}You ultimately
+design an experiment with power of $\beta=0.90$ and size $\alpha=0.05.$
+In the end you find no effect of zinc supplements on the prevalence
+of diarrhea (i.e., you fail to reject the null of no effect). Prior
+to the experiment you believed that the probability that zinc supplements
+reduced the prevalence of diarrhea was 0.75. What is your belief after
+your null finding? Explain \textbf{{[}3-5 sentences{]}}.
+\end{document}
