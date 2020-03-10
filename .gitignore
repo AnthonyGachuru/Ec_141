@@ -17,7 +17,6 @@
 
 # Source Lyx/Tex/BibTex files
 *.tex
-!Midterm_1_Ec141_Spring2020.tex  #Make .tex file for midterm available
 *.lyx
 
 *lyx-format*.lyx
